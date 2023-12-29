@@ -9,19 +9,26 @@ function Todoinput(props) {
       setInputText("")     
      }
   }
+
+  const handleInputChange = (e) => {
+    setInputText(e.target.value);
+  };
+
+
  // return output
   return (
     <div className="input-container">
       <input type="text" 
         className="input-box-todo" 
-        placeholder="Enter a task" 
-        onChange={e=>{setInputText(e.target.value)
-        }}
-         onKeyDown={handleEnterPress}
+        placeholder="Enter a task"
+        value={inputText} 
+        onChange={handleInputChange}
+        onKeyDown={handleEnterPress}
         />
         <button className="add-btn" 
         onClick={()=>{
         props.addList(inputText)
+        setInputText(''); // Reset the input text to an empty string
       }}>+</button>
     </div>
   )
