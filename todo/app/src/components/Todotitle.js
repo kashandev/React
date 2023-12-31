@@ -1,8 +1,10 @@
-import React from 'react' // import react, usestate from react
+// Todotitle.js
 
-// Todo list item function 
+import React from 'react' // Import react, usestate from react
+
+// Todo title function 
 function Todotitle(props) {
-// return output
+// Return output
   return (
    <li className="list-title">
     <span className="label-task">
@@ -17,4 +19,4 @@ function Todotitle(props) {
    </li>
   )
 }
-export default Todotitle // export Todotitle
+export default Todotitle // Export Todotitle

@@ -109,9 +109,21 @@ body{
 .icons i:hover{
   transform: scale(1.2);  
 }
-.icon-delete:hover{
-  color: red;
+i.icon-delete:hover{
+  border-color: #fff;
+  color: #dc3545;
+  border-color: #dc3545;
 }
+i.icon-edit:hover{
+  border-color: #fff;
+  color: #007bff;
+  border-color: #007bff;
+}
+
+i.icon-edit {
+  margin-right: 2px;
+}
+
 .status{
   position: absolute;
   right: 18vh;
