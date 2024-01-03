@@ -44,10 +44,17 @@ function App(props) {
     if (inputText) { // Check if input text is exist
       const updatedList = [...listTodo, inputText]; // Const list todo, input text
       const storedTodoList = localStorage.getItem('todoList'); // Const get todolist, input text
-      if (!isStringInArray(inputText, storedTodoList)) { // If checkText doesn't exist and newText is not in the array, append newText
+      if (storedTodoList === null || storedTodoList.trim() === "") {
         setListTodo(updatedList); // Set updated list
         localStorage.setItem('todoList', JSON.stringify(updatedList)); // Set updated list in local storage 
       }
+      else{
+      const parsedTodoList = JSON.parse(storedTodoList);
+      if (!isStringInArray(inputText, parsedTodoList)) { // If checkText doesn't exist and newText is not in the array, append newText
+        setListTodo(updatedList); // Set updated list
+        localStorage.setItem('todoList', JSON.stringify(updatedList)); // Set updated list in local storage 
+      }
+     }
     }
   };
 
