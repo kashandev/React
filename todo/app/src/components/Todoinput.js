@@ -70,7 +70,7 @@ function Todoinput(props) {
         <button
         className="add-btn"
         onClick={handleButtonClick}
-      >
+        >
         {showPlusIcon || props.isLocalStorageEmpty ? (
           <FontAwesomeIcon icon={faPlus} />
         ) : (
